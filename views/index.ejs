@@ -3,23 +3,29 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Teste</title>
+    <title>Listagem de Pessoas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/style/style.css'>
     <script src='main.js'></script>
 </head>
 <body>
-
+    <div class="containerGrid"
     <% pessoas.forEach((pessoa) => { %>
-        <form>
+        <form method="post" action="/pessoas/delete" >
+        <div class="container2">
         <%= pessoa.id %>
         <%= pessoa.nome %>
         <%= pessoa.sobrenome %>
-        <%= pessoa.idade %>
         <%= pessoa.altura %>
+        <%= pessoa.idade %>
+        <button><a href="/pessoas/delete?id=<%=pessoa.id %>">Deletar</a></button>
+    </div>
+    </form>
+
     <% }) %>
-    <button><a href="/pessoas/delete">Cancelar</a></button>
-</form>
+</div>
+    <button><a href="/pessoas/criar">Cadastrar</a></button>
+
 <br>
     
 </body>

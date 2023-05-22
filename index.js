@@ -14,12 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/pessoas', async function(req, res){
   var pessoas = await pessoa.findAll();
   res.render('index', { pessoas });
-})
+});
 
 app.get('/pessoas/criar', async function(req, res){
   var pessoas = await pessoa.findAll();
   res.render('pessoas/criar', { pessoas });
-})
+});
 
 app.post('/pessoas/criar', async function(req, res){
   try {
@@ -29,7 +29,7 @@ app.post('/pessoas/criar', async function(req, res){
     console.error(err);
     res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
 }
-})
+});
 
 app.get('/pessoas/delete', async function(req, res){
   try {
@@ -37,9 +37,9 @@ app.get('/pessoas/delete', async function(req, res){
       res.redirect('/pessoas')
   } catch (err) {
       console.error(err);
-      res.status(500).json({ message: 'Usuário deletado.' });
+      res.status(500).json({ message: 'Erro ao deletar o usuário.' });
   }
-})
+});
 
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')

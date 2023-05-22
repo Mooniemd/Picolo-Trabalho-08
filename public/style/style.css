@@ -1,14 +1,15 @@
 body{
 margin: 0;
 width: 100vw;
-height: 100vh;
+min-height: 100vh;
 background: #ecf0f3;
 display: flex;
+flex-wrap: wrap;
 align-items: center;
 text-align: center;
 justify-content: center;
 place-items: center;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-family: Courier New, monospace;
 
 }
 
@@ -22,6 +23,24 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 
 }
+
+.container2{
+    position: relative;
+    border-radius: 20px;
+    padding: 40px;
+    background: #ecf0f3;
+    box-shadow: -10px 1px 20px 4px #cbced1;
+    margin-top: 40px;
+}
+
+.containerGrid{
+    margin: 20px;
+    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+}
+
 
 .tittle{
     margin-top: 10px;
@@ -45,6 +64,7 @@ input, label, button{
     border: none;
     outline: none;
     box-sizing: border-box;
+    font-family: Courier New, monospace;
 
 }
 
