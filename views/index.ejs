@@ -13,18 +13,17 @@
     <% pessoas.forEach((pessoa) => { %>
         <form method="post" action="/pessoas/delete" >
         <div class="container2">
-        <%= pessoa.id %>
-        <%= pessoa.nome %>
-        <%= pessoa.sobrenome %>
-        <%= pessoa.altura %>
-        <%= pessoa.idade %>
-        <button><a href="/pessoas/delete?id=<%=pessoa.id %>">Deletar</a></button>
+        Nome:<%= pessoa.nome %>
+        Sobrenome:<%= pessoa.sobrenome %>
+        Altura:<%= pessoa.altura %>
+        Idade:<%= pessoa.idade %>
+        <button class="interact"><a  href="/pessoas/delete?id=<%=pessoa.id %>">Deletar</a></button>
     </div>
     </form>
 
     <% }) %>
 </div>
-    <button><a href="/pessoas/criar">Cadastrar</a></button>
+    <button class="interact2" ><a href="/pessoas/criar">Cadastrar</a></button>
 
 <br>
     

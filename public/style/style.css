@@ -57,7 +57,7 @@ font-family: Courier New, monospace;
 
 }
 
-input, label, button{
+input, label{
     display: block;
     width: 100%;
     padding: 0;
@@ -99,6 +99,52 @@ input {
     background: #3e464a;
     transition: 0.5s;
     box-shadow: none;
+}
+
+.interact{
+    display: block;
+    width: 67px;
+    height: 19px;
+    padding: 0;
+    outline: none;
+    font-family: Courier New, monospace;
+    margin-left: 115px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #212527;
+}
+
+.interact2{
+    display: block;
+    width: 85px;
+    height: 19px;
+    padding: 0;
+    outline: none;
+    font-family: Courier New, monospace;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #212527;
+}
+
+.interact:hover{
+    background: #3e464a;
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+.interact2:hover{
+    background: #3e464a;
+    transition: 0.5s;
+    box-shadow: none;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 100px;
+    color: white;
+    font-size: 15px;
+
 }
 
 
